@@ -12,9 +12,11 @@ shinyUI(
         tags$style(type='text/css', ".span4 { max-width: 310px; }"),
         tags$style(type='text/css', "label { display: inline-block; line-height: 30px; }"),
         tags$style(type="text/css", "label.control-label { display: block; }"),
-        tags$style(type="text/css", ".help-block { color: black; }")
+        tags$style(type="text/css", ".help-block { color: black; }"),
+        tags$style(type="text/css", ".well input[type='text'], .well input[type='number'], .well select { max-width: 50px; }")
       ),
       
+      helpText("Please enter your child's age, temperature and method used to record temperature (either oral, rectal, or under the arm) to receive advice on how best to treat his/her fever."),
       helpText("Age of Child:"),
       numericInput('years', 'Years', 0, min = 0, max = 16, step = 1),
       numericInput('months', 'Months', 0, min = 0, max = 11, step = 1),      
